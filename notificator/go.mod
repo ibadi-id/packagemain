@@ -10,6 +10,7 @@ require (
 	github.com/openzipkin-contrib/zipkin-go-opentracing v0.4.5
 	github.com/openzipkin/zipkin-go v0.4.0
 	github.com/prometheus/client_golang v1.13.0
+	github.com/satori/go.uuid v1.2.0
 	google.golang.org/grpc v1.48.0
 	google.golang.org/protobuf v1.28.1
 	sourcegraph.com/sourcegraph/appdash v0.0.0-20211028080628-e2786a622600

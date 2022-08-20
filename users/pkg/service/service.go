@@ -19,8 +19,17 @@ type basicUsersService struct{
 }
 
 func (b *basicUsersService) Create(ctx context.Context, email string) (e0 error) {
-	// TODO implement the business logic of Create
-	return e0
+	// TODO : Create user in Database
+
+	reply, err := b.notificatorServiceClient.SendEmail(context.Background(), &pb.SendEmailRequest{
+		Email:   email,
+		Content: "Hi! Thank you for registration...",
+	})
+
+	if reply != nil {
+		log.Printf("Email ID: %s", reply.Id)
+	}
+	return err
 }
 
 // NewBasicUsersService returns a naive, stateless implementation of UsersService.
